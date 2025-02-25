@@ -1,4 +1,4 @@
-import { useStoreDispatch, useStoreSelector } from "./hooks/store"
+import { useStoreSelector } from "./hooks/store"
 import { selectCount } from "./store/reducers/counterSlice"
 
 export const App = () => {
