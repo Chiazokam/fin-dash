@@ -17,9 +17,8 @@ export const Header = ({ title }: { title: string }) => {
     return (
         <header className="flex flex-col gap-5 py-[21px] px-6 sm:px-10 bg-white border-b border-[#E6EFF5]">
             <div className='flex items-center justify-between'>
-
-                <button tabIndex={1}>
-                    <HamburgerIcon className='flex sm:hidden' />
+                <button tabIndex={1} className='flex sm:hidden'>
+                    <HamburgerIcon />
                 </button>
                 <h1 className="text-xl md:text-large text-primary font-semibold">{title}</h1>
 
