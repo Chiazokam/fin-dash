@@ -1,11 +1,20 @@
+import { useState } from "react";
+import { Routes, Route } from "react-router";
 import { useStoreSelector } from "./hooks/store"
 import { selectCount } from "./store/reducers/counterSlice"
+import { Settings, Dashboard, Header } from "./components";
 
 export const App = () => {
-  const count = useStoreSelector(selectCount)
+  const [pageTitle, setPageTitle] = useState('Overview')
+  const count = useStoreSelector(selectCount);
+
   return (
-    <div  className="bg-red-300">
-      <p className="">Some random text {count}</p>
+    <div>
+      <Header title={pageTitle} />
+        <Routes>
+          <Route index path="/" element={<Dashboard />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
     </div>
   )
 }
