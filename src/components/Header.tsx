@@ -21,7 +21,7 @@ export const Header = ({ openSidebar }: Props) => {
     }, [dispatch])
 
     return (
-        <header className="flex flex-col gap-5 py-[21px] px-6 sm:px-10 bg-white md:border-b md:border-[#E6EFF5] h-35 md:h-21 lg:h-25">
+        <header className="flex flex-col flex-none gap-5 py-[21px] px-6 sm:px-10 bg-white md:border-b md:border-[#E6EFF5] h-35 md:h-21 lg:h-25">
             <div className='flex items-center justify-between'>
                 <button tabIndex={1} className='flex md:hidden' onClick={openSidebar}>
                     <HamburgerIcon />

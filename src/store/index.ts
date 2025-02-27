@@ -2,11 +2,13 @@ import type { Action, ThunkAction } from "@reduxjs/toolkit"
 import { configureStore } from "@reduxjs/toolkit"
 import userReducer from "./reducers/userSlice"
 import pageReducer from "./reducers/pageSlice"
+import cardReducer from "./reducers/cardSlice"
 
 export const store = configureStore({
   reducer: {
     user: userReducer,
-    page: pageReducer
+    page: pageReducer,
+    card: cardReducer
   },
 
   middleware: (getDefaultMiddleware) =>
