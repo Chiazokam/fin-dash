@@ -1,18 +1,14 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router";
-import { Settings, Dashboard, Header } from "./components";
+import { Settings, Dashboard, Layout } from "./components";
 
 export const App = () => {
-  const [pageTitle] = useState('Overview')
-
   return (
-    <div>
-      <Header title={pageTitle} />
-        <Routes>
-          <Route index path="/" element={<Dashboard />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
-    </div>
+    <Layout>
+      <Routes>
+        <Route index path="/dashboard" element={<Dashboard />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
+    </Layout>
   )
 }
 

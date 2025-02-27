@@ -1,12 +1,12 @@
 import type { Action, ThunkAction } from "@reduxjs/toolkit"
 import { configureStore } from "@reduxjs/toolkit"
-import counterReducer from "./reducers/counterSlice"
 import userReducer from "./reducers/userSlice"
+import pageReducer from "./reducers/pageSlice"
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     user: userReducer,
+    page: pageReducer
   },
 
   middleware: (getDefaultMiddleware) =>
