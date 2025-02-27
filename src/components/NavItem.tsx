@@ -16,18 +16,19 @@ export const NavItem = ({ Icon, navTitle, id }: Props) => {
 
     return (
         <button 
-            className={cn('flex gap-[26px] pl-10 pr-4 py-4 items-center cursor-pointer',
-            selectedPage.id === id && "border-l-6 border-black"
-            )}
+            className='flex pr-4 py-5 items-center cursor-pointer'
             onClick={() => {
                 dispatch(setActivePage(id))
                 navigate(`/${id}`)
             }}
         >
-            <Icon fill='#232323' />
-            <h3 className={cn('text-sm sm:text-[18px] font-medium text-nav-text',
-                selectedPage.id === id && 'text-black'
-            )}>{navTitle}</h3>
+            {selectedPage.id === id && <div className="absolute w-1.5 bg-black h-[60px] rounded-r-md" />}
+            <div className="flex gap-[26px] pl-10">
+                <Icon fill='#232323' />
+                <h3 className={cn('text-sm sm:text-[18px] font-medium text-nav-text',
+                    selectedPage.id === id && 'text-black'
+                )}>{navTitle}</h3>
+            </div>
         </button>
     )
 }
