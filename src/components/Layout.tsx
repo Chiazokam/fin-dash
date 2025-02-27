@@ -6,7 +6,6 @@ import { useIsMobile } from "../hooks/useIsMobile";
 const MOBILE_VIEWPORT = 912;
 
 export const Layout = ({ children }: { children: ReactNode }) => {
-  const [activePage, setActivePage] = useState('Overview')
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const isMobile = useIsMobile(MOBILE_VIEWPORT)
   const ref = useRef<HTMLDivElement | null>(null)
@@ -40,7 +39,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     <div className="flex h-screen w-full">
         <Sidebar ref={ref} open={isSidebarOpen} />
         <div className="flex-1 flex flex-col">
-            <Header title={activePage} openSidebar={openSidebar} />
+            <Header openSidebar={openSidebar} />
             {children}
         </div>
     </div>
