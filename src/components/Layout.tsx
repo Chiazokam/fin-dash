@@ -40,7 +40,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <Sidebar ref={ref} open={isSidebarOpen} />
         <div className="flex-1 flex flex-col">
             <Header openSidebar={openSidebar} />
-            {children}
+            <div className="absolute max-w-[calc(100%-250px)] top-[120px] md:top-[101px]">
+              {children}
+            </div>
         </div>
     </div>
     )

@@ -8,8 +8,10 @@
   --color-background: #F5F7FA;
   --color-placeholder: #8BA3CB;
   --text-large: 28px;
+  --text-h2: 22px;
   --breakpoint-sm: 700px;
   --breakpoint-md: 912px;
+  --radius-3xl: 25px;
 }
 
 :root {
@@ -32,4 +34,3 @@ body {
     background-color: #fff;
   }
 }
-4

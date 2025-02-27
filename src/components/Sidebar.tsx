@@ -27,7 +27,7 @@ export const Sidebar = ({ open, ref }: Props) => {
                 <h1 className='text-primary text-[25px] font-extrabold'>Soar Task</h1>
             </div>
 
-            <nav className='pt-8 sm:pt-16 flex flex-col'>
+            <nav className='pt-8 lg:pt-16 flex flex-col'>
                 <NavItem Icon={HomeIcon} id='Overview' navTitle='Dashboard' />
                 <NavItem Icon={TransactionsIcon} id='Transactions' navTitle='Transactions' />
                 <NavItem Icon={AccountsIcon} id='Accounts' navTitle='Accounts' />
