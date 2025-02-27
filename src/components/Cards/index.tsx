@@ -12,7 +12,7 @@ export const Cards = () => {
     }, [dispatch])
 
     return (
-        <div className="flex gap-7.5">
+        <div className="flex gap-7.5 w-full md:w-[730px] overflow-x-auto">
             {myCards.slice(0, 2).map((card, index) => <Card key={card.id} card={card} {...(index === 0 && { isDark: true })} />)}
         </div>
     )
