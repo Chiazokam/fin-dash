@@ -15,45 +15,45 @@ export interface PageState {
 const initialState: PageState = {
   pages: [
     {
-        id: 'overview',
-        title: 'dashboard'
+        id: 'Overview',
+        title: 'Dashboard'
     },
     {
-        id: 'transactions',
-        title: 'transactions'
+        id: 'Transactions',
+        title: 'Transactions'
     },
     {
-        id: 'accounts',
-        title: 'accounts'
+        id: 'Accounts',
+        title: 'Accounts'
     },
     {
-        id: 'investments',
-        title: 'investments'
+        id: 'Investments',
+        title: 'Investments'
     },
     {
-        id: 'cards',
-        title: 'credit cards'
+        id: 'Cards',
+        title: 'Credit Cards'
     },
     {
-        id: 'loans',
-        title: 'loans'
+        id: 'Loans',
+        title: 'Loans'
     },
     {
-        id: 'services',
-        title: 'services'
+        id: 'Services',
+        title: 'Services'
     },
     {
-        id: 'privileges',
-        title: 'my privileges'
+        id: 'Privileges',
+        title: 'My Privileges'
     },
     {
-        id: 'setting',
-        title: 'setting'
+        id: 'Setting',
+        title: 'Setting'
     }
   ],
   activePage: {
-    id: 'overview',
-    title: 'dashboard',
+    id: 'Overview',
+    title: 'Dashboard',
   }
 }
 

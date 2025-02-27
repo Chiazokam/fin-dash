@@ -5,15 +5,16 @@ import HamburgerIcon from '../assets/icons/hamburger.svg?react';
 import NotificationIcon from '../assets/icons/notification.svg?react';
 import { useStoreDispatch, useStoreSelector } from "../hooks/useStore"
 import { getLoggedInUser, selectUser } from '../store/reducers/userSlice';
+import { activePage } from '../store/reducers/pageSlice';
 
 interface Props {
-    title: string
     openSidebar: () => void
 }
 
-export const Header = ({ title, openSidebar }: Props) => {
+export const Header = ({ openSidebar }: Props) => {
     const dispatch = useStoreDispatch()
     const user = useStoreSelector(selectUser);
+    const selectedPage = useStoreSelector(activePage);
 
     useEffect(() => {
         dispatch(getLoggedInUser())
@@ -25,7 +26,7 @@ export const Header = ({ title, openSidebar }: Props) => {
                 <button tabIndex={1} className='flex md:hidden' onClick={openSidebar}>
                     <HamburgerIcon />
                 </button>
-                <h1 className="text-xl lg:text-large text-primary font-semibold">{title}</h1>
+                <h1 className="text-xl lg:text-large text-primary font-semibold">{selectedPage.id}</h1>
 
                 <div className='flex gap-[30px]'>
                     <div className='hidden md:flex bg-background py-2 lg:py-4 px-6 rounded-full items-center gap-4'>

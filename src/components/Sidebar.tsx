@@ -27,16 +27,16 @@ export const Sidebar = ({ open, ref }: Props) => {
                 <h1 className='text-primary text-[25px] font-extrabold'>Soar Task</h1>
             </div>
 
-            <nav className='pt-16 flex flex-col gap-2'>
-                <NavItem Icon={HomeIcon} id='overview' navTitle='Dashboard' />
-                <NavItem Icon={TransactionsIcon} id='transactions' navTitle='Transactions' />
-                <NavItem Icon={AccountsIcon} id='accounts' navTitle='Accounts' />
-                <NavItem Icon={InvestmentsIcon} id='investments' navTitle='Investments' />
-                <NavItem Icon={CardIcon} id='cards' navTitle='Credit Cards' />
-                <NavItem Icon={LoanIcon} id='loans' navTitle='Loans' />
-                <NavItem Icon={ServicesIcon} id='services' navTitle='Services' />
-                <NavItem Icon={PrivilegesIcon} id='privileges' navTitle='My Privileges' />
-                <NavItem Icon={NavSettingsIcon} id='setting' navTitle='Setting' />
+            <nav className='pt-8 sm:pt-16 flex flex-col gap-2'>
+                <NavItem Icon={HomeIcon} id='Overview' navTitle='Dashboard' />
+                <NavItem Icon={TransactionsIcon} id='Transactions' navTitle='Transactions' />
+                <NavItem Icon={AccountsIcon} id='Accounts' navTitle='Accounts' />
+                <NavItem Icon={InvestmentsIcon} id='Investments' navTitle='Investments' />
+                <NavItem Icon={CardIcon} id='Cards' navTitle='Credit Cards' />
+                <NavItem Icon={LoanIcon} id='Loans' navTitle='Loans' />
+                <NavItem Icon={ServicesIcon} id='Services' navTitle='Services' />
+                <NavItem Icon={PrivilegesIcon} id='Privileges' navTitle='My Privileges' />
+                <NavItem Icon={NavSettingsIcon} id='Setting' navTitle='Setting' />
             </nav>
         </div>
     )
