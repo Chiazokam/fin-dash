@@ -2,12 +2,14 @@
 
 @theme {
   --color-primary: #343C6A;
+  --color-nav-text: #B1B1B1;
+  --color-black: #232323;
   --border-header: #E6EFF5;
   --color-background: #F5F7FA;
   --color-placeholder: #8BA3CB;
   --text-large: 28px;
   --breakpoint-sm: 700px;
-  --breakpoint-md: 850px;
+  --breakpoint-md: 912px;
 }
 
 :root {
@@ -24,3 +26,10 @@
 body {
   background-color: var(--color-background)
 }
+
+@media screen and (max-width: 912px) {
+  body {
+    background-color: #fff;
+  }
+}
+4
