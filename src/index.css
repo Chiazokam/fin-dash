@@ -2,8 +2,11 @@
 
 @theme {
   --color-primary: #343C6A;
+  --color-secondary: #718EBF;
   --color-nav-text: #B1B1B1;
   --color-black: #232323;
+  --color-red: #FF4B4A;
+  --color-green: #41D4A8;
   --border-header: #E6EFF5;
   --color-background: #F5F7FA;
   --color-placeholder: #8BA3CB;

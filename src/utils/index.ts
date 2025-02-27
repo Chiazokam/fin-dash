@@ -16,5 +16,8 @@ export const  maskCardNumberDigits = (cardNumber: string) => {
   const lastFour = cardNumber.slice(-4);
 
   return `${firstFour}  ${"*".repeat(4)} ${"*".repeat(4)} ${lastFour}`;
+}
 
+export const getTransactionDate = (date: Date) => {
+  return new Date(date).toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
 }

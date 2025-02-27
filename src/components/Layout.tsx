@@ -38,9 +38,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex h-screen w-full">
         <Sidebar ref={ref} open={isSidebarOpen} />
-        <div className="flex-1 flex flex-col">
+        <div className="relative flex flex-col flex-1 h-full overflow-hidden">
             <Header openSidebar={openSidebar} />
-            <div className="absolute max-w-[calc(100%-250px)] top-[120px] md:top-[101px]">
+            <div className="flex w-full justify-center overflow-y-auto">
               {children}
             </div>
         </div>

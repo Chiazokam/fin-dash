@@ -1,24 +1,25 @@
 import { Cards } from "./Cards"
+import { Transactions } from "./Transactions"
 
 export const Dashboard = () => {
     return (
-        <div className="flex flex-col py-6 px-10">
+        <div className="flex flex-col py-6 px-10 w-full">
 
-            <div className="flex gap-[30px] flex-col md:flex-row">
+            <div className="flex gap-[30px] flex-col lg:flex-row">
                 <div className="flex flex-col gap-5">
-                    <div className="flex justify-between">
-                        <h2 className="text-h2 font-semibold text-primary">My Cards</h2>
+                    <div className="flex justify-between items-baseline">
+                        <h2 className="text-base md:text-h2 font-semibold text-primary">My Cards</h2>
                         <button className="hover:border-b cursor-pointer">
-                            <p className="text-primary font-semibold">See All</p>
+                            <p className="text-primary font-semibold text-sm md:text-[17px]">See All</p>
                         </button>
                     </div>
-                    <div className="w-[730px] overflow-x-auto ">
-                        <Cards />
-                    </div>
+
+                    <Cards />
                 </div>
 
                 <div className="flex flex-col gap-5">
-                    <h2 className="text-h2 font-semibold text-primary">Recent Transaction</h2>
+                    <h2 className="text-base md:text-h2 font-semibold text-primary">Recent Transaction</h2>
+                    <Transactions />
                 </div>
                 <div></div>
             </div>
