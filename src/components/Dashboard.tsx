@@ -1,9 +1,10 @@
 import { Cards } from "./Cards"
 import { Transactions } from "./Transactions"
+import { WeeklyActivities } from "./WeeklyActivities"
 
 export const Dashboard = () => {
     return (
-        <div className="flex flex-col py-6 px-10 w-full">
+        <div className="flex flex-col py-6 px-10 w-full gap-6">
 
             <div className="flex gap-[30px] flex-col lg:flex-row">
                 <div className="flex flex-col gap-5">
@@ -24,7 +25,16 @@ export const Dashboard = () => {
                 <div></div>
             </div>
 
-            <div>Weekly Activities and Expense Statistics</div>
+            <div className="flex gap-[30px] flex-col lg:flex-row">
+                <div className="flex flex-col gap-5">
+                    <h2 className="text-base md:text-h2 font-semibold text-primary">Weekly Activities</h2>
+                    <WeeklyActivities />
+                </div>
+                
+                <div>
+                    Expense Statistics
+                </div>
+            </div>
             <div>Quick transfer and balance history</div>
         </div>
     )
