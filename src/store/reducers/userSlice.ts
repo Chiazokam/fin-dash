@@ -3,6 +3,7 @@ import type { PayloadAction } from "@reduxjs/toolkit"
 import type { RootState } from "../index"
 
 export type UserType = {
+  id: string
   name: string
   avatar: string
   role: string
@@ -16,11 +17,13 @@ export interface UserState {
 
 const initialState: UserState = {
   loggedInUser: {
+    id: '',
     name: '',
     avatar: '',
     role: ''
   },
   selectedContact: {
+    id: '',
     name: '',
     avatar: '',
     role: ''
@@ -64,6 +67,7 @@ export const userSlice = createSlice({
 })
 
 export default userSlice.reducer
+export const { setActiveUser } = userSlice.actions
 
 export const selectUser = (state: RootState) => state.user.loggedInUser
 export const users = (state: RootState) => state.user.users
