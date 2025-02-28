@@ -2,6 +2,7 @@ import { Cards } from "./Cards"
 import { Transactions } from "./Transactions"
 import { WeeklyActivities } from "./WeeklyActivities"
 import { ExpenseStatistics } from "./ExpenseStatistics"
+import { QuickTransfer } from "../QuickTransfer"
 
 export const Dashboard = () => {
     return (
@@ -37,7 +38,18 @@ export const Dashboard = () => {
                 </div>
 
             </div>
-            <div>Quick transfer and balance history</div>
+
+            <div className="flex gap-[30px] flex-col lg:flex-row pb-6">
+                <div className="flex flex-col gap-5">
+                    <h2 className="text-base md:text-h2 font-semibold text-primary">Quick Transfer</h2>
+                    <QuickTransfer />
+                </div>
+                
+                {/* <div className="flex flex-col gap-5">
+                    <h2 className="text-base md:text-h2 font-semibold text-primary">Expense Statistics</h2>
+                    <ExpenseStatistics />
+                </div> */}
+            </div>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import NotificationIcon from '../assets/icons/notification.svg?react';
 import { useStoreDispatch, useStoreSelector } from "../hooks/useStore"
 import { getLoggedInUser, selectUser } from '../store/reducers/userSlice';
 import { activePage } from '../store/reducers/pageSlice';
+import { Avatar } from './Avatar';
 
 interface Props {
     openSidebar: () => void
@@ -13,7 +14,7 @@ interface Props {
 
 export const Header = ({ openSidebar }: Props) => {
     const dispatch = useStoreDispatch()
-    const user = useStoreSelector(selectUser);
+    const loggedInUser = useStoreSelector(selectUser);
     const selectedPage = useStoreSelector(activePage);
 
     useEffect(() => {
@@ -42,9 +43,7 @@ export const Header = ({ openSidebar }: Props) => {
                         <NotificationIcon />
                     </div>
 
-                    <div className='bg-background rounded-full items-center w-10 h-10 lg:w-15 lg:h-15'>
-                        <img alt='user avatar' className='w-10 h-10 lg:w-15 lg:h-15 rounded-full' src={user.avatar} />
-                    </div>
+                    <Avatar fullName={loggedInUser.name} imageUrl={loggedInUser.avatar} />
                 </div>
             </div>
 
