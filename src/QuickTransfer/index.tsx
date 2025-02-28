@@ -29,7 +29,7 @@ export const QuickTransfer = () => {
                     <input className="focus:outline-0 px-7.5 text-secondary text-xs sm:text-base" placeholder="525.50" />
                     <button className="flex items-center absolute top-0 right-0 gap-3 bg-black rounded-full py-3 sm:py-3.5 px-6 cursor-pointer hover:bg-black/80">
                         <span className="text-white text-xs sm:text-base">Send</span>
-                        <Send className="w-4 h-4" />
+                        <Send className="w-4 sm:w-6 h-4 sm:h-6" />
                     </button>
                 </div>
             </div>
