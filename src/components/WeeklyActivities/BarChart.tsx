@@ -6,7 +6,7 @@ import {
   Title,
   Tooltip,
   Legend,
-  ChartOptions
+  // ChartOptions
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
@@ -19,24 +19,24 @@ ChartJS.register(
   Legend
 );
 
-const options: ChartOptions = {
+const options = {
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
     legend: {
         display: true,
-        position: "top",
+        // position: "top",
         labels: {
           boxWidth: 15,
           boxHeight: 15,
           borderRadius: 7,
           useBorderRadius: true,
-          textAlign: 'right',
+          // textAlign: 'right',
           font: {
             size: 15
           },
         },
-        align: 'end'
+        // align: 'end'
       },
   },
   scales: {
