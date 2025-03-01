@@ -25,18 +25,17 @@ const options = {
   plugins: {
     legend: {
         display: true,
-        // position: "top",
+        position: 'top' as const,
         labels: {
           boxWidth: 15,
           boxHeight: 15,
           borderRadius: 7,
           useBorderRadius: true,
-          // textAlign: 'right',
           font: {
             size: 15
           },
         },
-        // align: 'end'
+        align: 'end' as const
       },
   },
   scales: {
