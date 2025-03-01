@@ -10,7 +10,7 @@ interface Props {
 export const Card = ({ card, isDark }: Props) => {
     const { balance, cardHolder, expDate, cardNumber} = card;
     return (
-        <div className={cn('flex flex-col gap-8 w-[350px] min-w-[350px] rounded-3xl pt-6 font-[Lato]',
+        <div className={cn('flex flex-col gap-8 w-[265px] sm:w-[350px] min-w-[350px] rounded-3xl pt-6 font-[Lato]',
             isDark ? `bg-linear-to-r from-[#5B5A6F] to-[#000000]` : 'bg-white border border-slate-200'
         )}>
             <div className='flex justify-between px-6'>

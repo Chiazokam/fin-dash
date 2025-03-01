@@ -34,8 +34,3 @@ body {
   background-color: var(--color-background)
 }
 
-@media screen and (max-width: 912px) {
-  body {
-    background-color: #fff;
-  }
-}

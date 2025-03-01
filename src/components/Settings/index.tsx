@@ -14,7 +14,7 @@ export const Settings = () => {
     const [activeTab, setActiveTab] = useState('Edit Profile');
     
     return (
-        <div className="flex flex-col md:pt-7.5 px-11 w-full h-fit bg-white m-10 rounded-3xl">
+        <div className="flex flex-col pt-4.5 md:pt-7.5 px-6 sm:px-11 w-full h-fit bg-white rounded-3xl">
             <div className="flex gap-12 border-b border-[#F4F5F7] w-full pb-2">
                 {tabs.map(tab => 
                     <button className="relative cursor-pointer w-28" key={tab} onClick={() => setActiveTab(tab)}>
