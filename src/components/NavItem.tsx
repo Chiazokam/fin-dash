@@ -24,7 +24,7 @@ export const NavItem = ({ Icon, navTitle, id }: Props) => {
         >
             {selectedPage.id === id && <div className="absolute w-1.5 bg-black h-[60px] rounded-r-md" />}
             <div className="flex gap-[26px] pl-10">
-                <Icon fill='#232323' />
+                <Icon />
                 <h3 className={cn('text-sm sm:text-[18px] font-medium text-nav-text',
                     selectedPage.id === id && 'text-black'
                 )}>{navTitle}</h3>

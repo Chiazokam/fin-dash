@@ -1,4 +1,8 @@
-<svg width="25" height="25" viewBox="0 0 25 25" fill="current" xmlns="http://www.w3.org/2000/svg">
+import { SVGProps } from 'react'
+
+export const Privileges = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg width="25" height="25" viewBox="0 0 25 25" fill="current" xmlns="http://www.w3.org/2000/svg" {...props}>
 <g clip-path="url(#clip0_14_1906)">
 <path d="M4.81137 16.6678C5.06276 16.8174 5.27861 17.0121 5.45086 17.2371H8.70602V14.0806L7.16251 13.1236C6.81875 12.9105 6.71285 12.459 6.92596 12.1153C7.13913 11.7716 7.5904 11.6657 7.93432 11.8787L9.43838 12.8112L10.7494 11.9984C8.13449 8.41283 8.73502 3.33221 12.2157 0.464604C6.48226 -1.45611 0.46783 2.8135 0.440684 8.94559C0.426525 12.1976 2.15786 15.0882 4.81137 16.6678Z" fill="#B1B1B1"/>
 <path d="M5.90887 18.7018H12.8418V20.3618H5.90887V18.7018Z" fill="#B1B1B1"/>
@@ -12,3 +16,6 @@
 </clipPath>
 </defs>
 </svg>
+
+  )
+}
