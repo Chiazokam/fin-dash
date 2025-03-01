@@ -7,11 +7,13 @@
   --color-black: #232323;
   --color-red: #FF4B4A;
   --color-green: #41D4A8;
+  --color-border: #DFEAF2;
   --border-header: #E6EFF5;
   --color-background: #F5F7FA;
   --color-placeholder: #8BA3CB;
   --text-large: 28px;
   --text-h2: 22px;
+  --text-custom-sm: 15px;
   --breakpoint-sm: 700px;
   --breakpoint-md: 912px;
   --radius-3xl: 25px;

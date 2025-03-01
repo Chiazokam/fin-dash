@@ -30,7 +30,7 @@ export const Card = ({ card, isDark }: Props) => {
                     <p className={cn('text-xs font-normal opacity-70',
                         isDark ? 'text-white' : 'text-secondary'
                     )}>CARD HOLDER</p>
-                    <p className={cn('text-xl font-semibold text-[15px]',
+                    <p className={cn('font-semibold text-custom-sm',
                         isDark ? 'text-white' : 'text-primary'
                     )}>{cardHolder}</p>
                 </div>
@@ -38,7 +38,7 @@ export const Card = ({ card, isDark }: Props) => {
                     <p className={cn('text-xs font-normal opacity-70',
                         isDark ? 'text-white' : 'text-secondary'
                     )}>VALID THRU</p>
-                    <p className={cn('text-xl font-semibold text-[15px]',
+                    <p className={cn('font-semibold text-custom-sm',
                         isDark ? 'text-white' : 'text-primary'
                     )}>{getExpDate(expDate)}</p>
                 </div>

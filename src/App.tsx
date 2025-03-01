@@ -5,7 +5,7 @@ export const App = () => {
   return (
     <Layout>
       <Routes>
-        <Route index path="/overview" element={<Dashboard />} />
+        <Route path="/overview" element={<Dashboard />} />
         <Route path="/setting" element={<Settings />} />
       </Routes>
     </Layout>
