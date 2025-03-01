@@ -13,6 +13,5 @@ export const Edit = (props: SVGProps<SVGSVGElement>) => {
 </clipPath>
 </defs>
 </svg>
-
   )
 }

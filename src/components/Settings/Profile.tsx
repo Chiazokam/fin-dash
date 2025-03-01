@@ -12,6 +12,7 @@ export const Profile = () => {
     useEffect(() => {
         dispatch(getLoggedInUser())
     }, [dispatch])
+
     return (
         <div className="flex w-full flex-col sm:flex-row items-center gap-5 sm:gap-16">
             <div className="relative sm:self-start">
@@ -20,7 +21,7 @@ export const Profile = () => {
             </div>
 
             <div className="w-full">
-                <EditProfile />
+                <EditProfile user={loggedInUser} />
             </div>
         </div>
     )

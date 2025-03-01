@@ -5,13 +5,22 @@ import type { RootState } from "../index"
 export type UserType = {
   id: string
   name: string
+  userName: string
+  email: string
+  password: string
+  dob: string
+  presentAddress: string
+  permAddress: string
+  city: string
+  postalCode: string
+  country: string
   avatar: string
   role: string
 }
 export interface UserState {
   loggedInUser: UserType,
   users: UserType[],
-  selectedContact: UserType,
+  selectedContact: Pick<UserType, 'id' | 'name' | 'avatar' | 'role'>,
   status: 'loading' | 'success' | 'failed'
 }
 
@@ -19,8 +28,17 @@ const initialState: UserState = {
   loggedInUser: {
     id: '',
     name: '',
-    avatar: '',
-    role: ''
+    userName: '',
+    email: '',
+    password: '',
+    dob: '',
+    presentAddress: '',
+    permAddress: '',
+    city: '',
+    postalCode: '',
+    country: '',
+    role: '',
+    avatar: ''
   },
   selectedContact: {
     id: '',
@@ -43,24 +61,21 @@ export const userSlice = createSlice({
 
   extraReducers: builder => {
     builder
-      .addCase(getLoggedInUser.pending, state => {
-        state.status = "loading"
-      })
       .addCase(getLoggedInUser.fulfilled, (state, action) => {
         state.status = "success"
         state.loggedInUser = action.payload
-      })
-      .addCase(getLoggedInUser.rejected, state => {
-        state.status = "failed"
-      })
-      .addCase(getAllUsers.pending, state => {
-        state.status = "loading"
       })
       .addCase(getAllUsers.fulfilled, (state, action) => {
         state.status = "success"
         state.users = action.payload
       })
-      .addCase(getAllUsers.rejected, state => {
+      .addCase(editUser.pending, (state) => {
+        state.status = "loading"
+      })
+      .addCase(editUser.fulfilled, (state) => {
+        state.status = "success"
+      })
+      .addCase(editUser.rejected, (state) => {
         state.status = "failed"
       })
   },
@@ -72,6 +87,7 @@ export const { setActiveUser } = userSlice.actions
 export const selectUser = (state: RootState) => state.user.loggedInUser
 export const users = (state: RootState) => state.user.users
 export const selectedContact = (state: RootState) => state.user.selectedContact
+export const status = (state: RootState) => state.user.status
 
 export const getLoggedInUser = createAsyncThunk(
     "user/getLoggedInUser",
@@ -85,6 +101,18 @@ export const getLoggedInUser = createAsyncThunk(
     "user/getAllUsers",
     async () => {
       const response = await fetch("https://67be81c2b2320ee05010585b.mockapi.io/api/v1/users")
+      return response.json()
+    },
+  )
+
+  export const editUser = createAsyncThunk(
+    "user/editUser",
+    async (user: UserType) => {
+      const response = await fetch(`https://67be81c2b2320ee05010585b.mockapi.io/api/v1/users/${user.id}`, {
+      method: 'PUT',
+      headers: {'content-type':'application/json'},
+      body: JSON.stringify(user)
+    })
       return response.json()
     },
   )
