@@ -40,7 +40,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <Sidebar ref={ref} open={isSidebarOpen} />
         <div className="relative flex flex-col flex-1 h-full overflow-hidden">
             <Header openSidebar={openSidebar} />
-            <div className="flex w-full justify-center overflow-y-auto p-6 bg-white">
+            <div className="flex w-full justify-center overflow-y-auto p-6">
               {children}
             </div>
         </div>

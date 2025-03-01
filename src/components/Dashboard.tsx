@@ -7,7 +7,7 @@ import { BalanceHistory } from "./BalanceHistory"
 
 export const Dashboard = () => {
     return (
-        <div className="flex flex-col py-6  w-full gap-6 h-fit">
+        <div className="flex flex-col sm:py-6 w-full gap-6 h-fit">
 
             <div className="flex gap-[30px] flex-col lg:flex-row">
                 <div className="flex flex-col gap-5">

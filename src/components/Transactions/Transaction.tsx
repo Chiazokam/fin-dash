@@ -18,7 +18,7 @@ export const Transaction = ({ transaction }: Props) => {
                 
                 <Icon />
                 <div className="flex flex-col flex-1">
-                    <p className="text-sm md:text-base text-black font-medium w-120 md:w-40 truncate">{transactionTitle}</p>
+                    <p className="text-sm md:text-base text-black font-medium w-40 truncate">{transactionTitle}</p>
                     <p className="text-secondary text-xs md:text-[15px] font-normal">{getDateText(createdAt)}</p>
                 </div>
             </div>
