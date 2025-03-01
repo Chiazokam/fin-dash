@@ -1,6 +1,6 @@
 export const Preference = () => {
     return (
-        <div>
+        <div className="">
             Preference
         </div>
     )

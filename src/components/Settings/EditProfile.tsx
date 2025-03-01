@@ -108,8 +108,7 @@ export const EditProfile = ({ user }: {user: UserType}) => {
                 </div>
     
                 <button type='submit' className="self-end flex justify-center w-full lg:w-[190px] bg-black rounded-[15px] py-3 sm:py-3.5 px-6 cursor-pointer hover:bg-black/80">
-                {isSubmitting ? <Loader size={12} color='white' /> : <span className="text-white text-xs sm:text-[13px] sm:text-base">Save</span>}
-                    
+                    {isSubmitting ? <Loader size={12} color='white' /> : <span className="text-white text-[13px] sm:text-base">Save</span>}
                 </button>
             </Form>
           </Formik>
