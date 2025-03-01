@@ -1,7 +1,7 @@
 import { useState } from "react"
-import type { UserType } from "../store/reducers/userSlice"
-import { Next } from "../components/Icons"
-import { useIsMobile } from "../hooks/useIsMobile";
+import type { UserType } from "../../store/reducers/userSlice"
+import { Next } from "../../components/Icons"
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 type CarouselProps = {
     data: UserType[]

@@ -1,7 +1,7 @@
-import { useStoreDispatch, useStoreSelector } from "../hooks/useStore"
-import { selectedContact, setActiveUser, UserType } from '../store/reducers/userSlice';
-import { Avatar } from "../components/Avatar";
-import { cn } from "../utils";
+import { useStoreDispatch, useStoreSelector } from "../../hooks/useStore"
+import { selectedContact, setActiveUser, UserType } from '../../store/reducers/userSlice';
+import { Avatar } from "../../components/Avatar";
+import { cn } from "../../utils";
 
 interface Props {
     user: UserType
