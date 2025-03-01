@@ -14,7 +14,7 @@ export const QuickTransfer = () => {
     }, [dispatch])
 
     return (
-        <div className="flex flex-col gap-7 bg-white rounded-3xl md:px-6 py-2 md:py-[35px] lg:max-w-[445px]">
+        <div className="flex flex-col gap-7 bg-white rounded-3xl py-6 px-8 md:py-[35px] lg:max-w-[445px]">
             <Carousel
                 renderCard={(user: UserType) => 
                     <Contact key={user.id} user={user} />
@@ -26,7 +26,7 @@ export const QuickTransfer = () => {
                 <p className="text-xs sm:text-base text-secondary">Write Amount</p>
 
                 <div className="flex flex-1 items-center bg-slate-200 rounded-full relative py-3 sm:py-3.5">
-                    <input className="focus:outline-0 px-7.5 w-36 text-secondary text-xs sm:text-base" placeholder="525.50" />
+                    <input className="focus:outline-0 px-3 sm:px-7.5 w-36 text-secondary text-[10px] sm:text-base" placeholder="525.50" />
                     <button className="flex items-center absolute top-0 right-0 gap-3 bg-black rounded-full py-3 sm:py-3.5 px-6 cursor-pointer hover:bg-black/80">
                         <span className="text-white text-xs sm:text-base">Send</span>
                         <Send className="w-4 sm:w-6 h-4 sm:h-6" />

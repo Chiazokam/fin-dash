@@ -1,6 +1,6 @@
 import { Paypal, Credit, CardDeposit } from "../Icons"
 import type { TransactionType } from '../../store/reducers/transactionSlice';
-import { getTransactionDate, cn } from "../../utils"; 
+import { getDateText, cn } from "../../utils"; 
 
 // Used this to randomly assign icons to the transactions. In real life, this could come with the transaction data
 const TransactionIcons = [Credit, Paypal, CardDeposit]
@@ -18,8 +18,8 @@ export const Transaction = ({ transaction }: Props) => {
                 
                 <Icon />
                 <div className="flex flex-col flex-1">
-                    <p className="text-sm md:text-base text-black font-medium w-120 md:w-40 truncate">{transactionTitle}</p>
-                    <p className="text-secondary text-xs md:text-[15px] font-normal">{getTransactionDate(createdAt)}</p>
+                    <p className="text-sm md:text-base text-black font-medium w-40 truncate">{transactionTitle}</p>
+                    <p className="text-secondary text-xs md:text-[15px] font-normal">{getDateText(createdAt)}</p>
                 </div>
             </div>
 

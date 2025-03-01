@@ -10,7 +10,7 @@ interface Props {
 export const Card = ({ card, isDark }: Props) => {
     const { balance, cardHolder, expDate, cardNumber} = card;
     return (
-        <div className={cn('flex flex-col gap-8 w-[350px] min-w-[350px] rounded-3xl pt-6 font-[Lato]',
+        <div className={cn('flex flex-col gap-8 w-[265px] sm:w-[350px] min-w-[350px] rounded-3xl pt-6 font-[Lato]',
             isDark ? `bg-linear-to-r from-[#5B5A6F] to-[#000000]` : 'bg-white border border-slate-200'
         )}>
             <div className='flex justify-between px-6'>
@@ -30,7 +30,7 @@ export const Card = ({ card, isDark }: Props) => {
                     <p className={cn('text-xs font-normal opacity-70',
                         isDark ? 'text-white' : 'text-secondary'
                     )}>CARD HOLDER</p>
-                    <p className={cn('text-xl font-semibold text-[15px]',
+                    <p className={cn('font-semibold text-custom-sm',
                         isDark ? 'text-white' : 'text-primary'
                     )}>{cardHolder}</p>
                 </div>
@@ -38,7 +38,7 @@ export const Card = ({ card, isDark }: Props) => {
                     <p className={cn('text-xs font-normal opacity-70',
                         isDark ? 'text-white' : 'text-secondary'
                     )}>VALID THRU</p>
-                    <p className={cn('text-xl font-semibold text-[15px]',
+                    <p className={cn('font-semibold text-custom-sm',
                         isDark ? 'text-white' : 'text-primary'
                     )}>{getExpDate(expDate)}</p>
                 </div>

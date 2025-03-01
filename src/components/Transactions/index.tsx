@@ -12,7 +12,7 @@ export const Transactions = () => {
     }, [dispatch])
 
     return (
-        <div className="w-full lg:w-[350px] h-60 bg-white rounded-3xl pl-4 md:p-[25px] overflow-y-auto">
+        <div className="lg:w-[350px] h-60 bg-white rounded-3xl p-6 md:p-[25px] overflow-y-auto">
             <div className="flex flex-col gap-4">
                 {allTransactions.map((transaction) => <Transaction key={transaction.id} transaction={transaction} />)}
             </div>
