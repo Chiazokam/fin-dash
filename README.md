@@ -4,7 +4,7 @@ This project implements the [figma design](https://www.figma.com/design/Lf57jfEv
 
 
 ### Demo
-[Vercel Link](https://fin-dash-dd7esqsiz-chiazokams-projects.vercel.app/)
+[Vercel Link](https://fin-dash-k2knexig7-chiazokams-projects.vercel.app/)
 
 ### How To Set Up Locally
 
@@ -17,3 +17,5 @@ git clone https://github.com/Chiazokam/fin-dash.git
 - cd into `fin-dash` (or the name you cloned with)
 
 - Run `yarn`
+
+- Run the server with `yarn dev` and visit `http://localhost:5174/` to view the app
