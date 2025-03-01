@@ -73,9 +73,11 @@ export const userSlice = createSlice({
         state.status = "loading"
       })
       .addCase(editUser.fulfilled, (state) => {
+        console.log('got here', state.status)
         state.status = "success"
       })
       .addCase(editUser.rejected, (state) => {
+        console.log('got here 2')
         state.status = "failed"
       })
   },
