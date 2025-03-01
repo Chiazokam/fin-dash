@@ -43,7 +43,7 @@ export const Header = ({ openSidebar }: Props) => {
                         <NotificationIcon />
                     </div>
 
-                    <Avatar fullName={loggedInUser.name} imageUrl={loggedInUser.avatar} />
+                    <Avatar fullName={loggedInUser.name} imageUrl={loggedInUser.avatar} className='w-10 h-10 lg:w-15 lg:h-15' />
                 </div>
             </div>
 

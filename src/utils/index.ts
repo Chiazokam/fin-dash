@@ -18,6 +18,6 @@ export const  maskCardNumberDigits = (cardNumber: string) => {
   return `${firstFour}  ${"*".repeat(4)} ${"*".repeat(4)} ${lastFour}`;
 }
 
-export const getTransactionDate = (date: Date) => {
+export const getDateText = (date: Date) => {
   return new Date(date).toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' })
 }

@@ -14,7 +14,7 @@ export const Contact = ({ user }: Props) => {
 
     return (
         <button onClick={() => dispatch(setActiveUser(user))} className="flex flex-col gap-4 items-center cursor-pointer">
-            <Avatar fullName={name} imageUrl={avatar} imageSize='lg' />
+            <Avatar fullName={name} imageUrl={avatar} className="w-12.5 h-12.5 min-[540px]:w-17.5 min-[540px]:h-17.5" />
 
             <div className="flex flex-col items-center ">
                 <p className={cn("text-xs sm:text-base font-normal text-black text-center",

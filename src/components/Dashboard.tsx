@@ -7,7 +7,7 @@ import { BalanceHistory } from "./BalanceHistory"
 
 export const Dashboard = () => {
     return (
-        <div className="flex flex-col py-6 px-10 w-full gap-6">
+        <div className="flex flex-col py-6  w-full gap-6 h-fit">
 
             <div className="flex gap-[30px] flex-col lg:flex-row">
                 <div className="flex flex-col gap-5">
@@ -29,7 +29,7 @@ export const Dashboard = () => {
 
             <div className="flex gap-[30px] flex-col lg:flex-row">
                 <div className="flex flex-col gap-5">
-                    <h2 className="text-base md:text-h2 font-semibold text-primary">Weekly Activities</h2>
+                    <h2 className="text-base md:text-h2 font-semibold text-primary">Weekly Activity</h2>
                     <WeeklyActivities />
                 </div>
                 

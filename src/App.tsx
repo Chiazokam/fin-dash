@@ -1,12 +1,13 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import { Settings, Dashboard, Layout } from "./components";
 
 export const App = () => {
   return (
     <Layout>
       <Routes>
-        <Route index path="/overview" element={<Dashboard />} />
-        <Route path="/setting" element={<Settings />} />
+        <Route path="/" element={<Navigate to="/Overview" replace />} />
+        <Route path="/Overview" element={<Dashboard />} />
+        <Route path="/Setting" element={<Settings />} />
       </Routes>
     </Layout>
   )
